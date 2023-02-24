@@ -1,0 +1,41 @@
+//EXAMINE THE DOCUMENT OBJECT//
+//console.dir(document);
+//console.log(document.domain);
+//console.log(document.URL);
+//console.log(document.tittle);
+//document.tittle=123;
+//console.log(document.doctype);
+//console.log(document.head);
+//console.log(document.body);
+//console.log(document.all);
+//console.log(document.all[10]);
+//document.all[10].textcontent="hello";
+//console.log(document.forms[0]);
+//console.log(document.links);
+//console.log(document.images);
+
+
+
+//GETELEMENTBYID//
+//console.log(document.getElementBYID('header-title')
+//var headerTitle=document.getElementByID('header-title')
+//var header=document.getElementByID('main-header');
+//headerTitle.textcontent='hello';
+//headerTitle.innerText='Goodbye';
+//console.log(headerTitle.innerText);
+//headerTitle.innerHTML='<h3>hello</h3>';
+//headerTitle.style.borderBottom='solid 3px #000';
+
+
+
+//GETELEMENTBYCLASSNAME//
+// var items=document.getElementsByClassName('list-group-item');
+// // console.log(items);
+// // console.log(items[1]);
+// // items[1].textContent='hello 2';
+// items[1].style.fontWeight='bold';
+// items[1].style.backgroundColor='yellow';
+
+var addItems=document.getElementsByClassName('title');
+addItems[0].style.fontWeight='bold';
+addItems[0].style.backgroundColor='green';  
