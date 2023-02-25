@@ -36,6 +36,29 @@
 // items[1].style.fontWeight='bold';
 // items[1].style.backgroundColor='yellow';
 
-var addItems=document.getElementsByClassName('title');
-addItems[0].style.fontWeight='bold';
-addItems[0].style.backgroundColor='green';  
+//var addItems=document.getElementsByClassName('title');
+//addItems[0].style.fontWeight='bold';
+//addItems[0].style.backgroundColor='green';  
+
+//GETELEMENTSBYCLASSNAME//
+//var items=document.getElementsByClassName('list-group-items');
+//console.log(items);
+//console.log(items[1]);
+//items[1].textContent="hello 2";
+//items[1].style.fontWeight="bold";
+//items[1].style.backgroundColor="Yellow";
+//items.style.backgroundColor='#f4f4f4';
+//for(var i=0;i<items.length;i++){
+  //items[i].style.backgroundColor='#f4f4f4';
+//}
+
+var items = document.getElementsByClassName('list-group-item');
+// console.log(items);
+// console.log(items[2]);
+// items[2].textContent="hello 3";
+// items[2].style.fontWeight="bold";
+items[2].style.backgroundColor="green";
+
+for(var i=0;i<items.length;i++){
+  items[i].style.fontWeight='bold';
+}
