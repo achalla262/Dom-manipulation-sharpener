@@ -77,7 +77,7 @@
 //}
 
 //GETELEMENTSBYCLASSNAME//
-var items=document.getElementsByClassName('list-group-item');
+//var items=document.getElementsByClassName('list-group-item');
 //console.log(items);
 //console.log(items[4]);
 //items[4].textContent="hello 5";
@@ -113,16 +113,93 @@ var items=document.getElementsByClassName('list-group-item');
 // console.log(item);
 // item[1].style.color='green';
 
-var odd=document.querySelectorAll('li:nth-child(odd)');
-for(var i=0;i<odd.length;i++){
-  odd[i].style.backgroundColor="green";
-}
+// var odd=document.querySelectorAll('li:nth-child(odd)');
+// for(var i=0;i<odd.length;i++){
+//   odd[i].style.backgroundColor="green";
+// }
 
 
- for commenting  - select using mouse and press control + slash 
+//TRAVERSING THE DOM//
+var itemList=document.querySelector('#items');
+//parentNode//
+// console.log(itemList.parentNode);
+// itemList.parentNode.style.backgroundColor='#f4f4f4';
+// console.log(itemList.parentNode.parentNode.parentNode);
 
- for deleting : select using mouse and presee delete
+
+//parentElement//
+//  console.log(itemList.parentElement);
+// itemList.parentElement.style.backgroundColor='#f4f4f4';
+//  console.log(itemList.parentElement.parentElement.parentElement);
+
+//childNodes//
+//console.log(itemList.childNodes);
+// console.log(itemList.children);
+// console.log(itemList.children[1]);
+// itemList.children[1].style.background ='yellow';
+
+// FirstChild
+//console.log(itemList.firstChild);
+// //firstElementChild
+// console.log(itemList.firstElementChild);
+// itemList.firstElementChild.textContent='Hello 1';
 
 
+//lastChild
+// console.log(itemList.lastChild);
+//lastElementChild
+// console.log(itemList.lastElementChild);
+// itemList.lastElementChild.textContent='Hello 4';
 
+
+//nextsibling
+//console.log(itemList.nextSibling);
+//nextElementsibling
+//console.log(itemList.nextElementSibling)
+
+// //previousSibling
+// console.log(itemList.previousSibling);
+// //previousElementsibling
+// console.log(itemList.previousElementSibling);
+// itemList.previousElementSibling.style.color='green';
+
+
+//createElement//
+
+//create a div
+var newDiv = document.createElement('div');
+
+//Add class
+newDiv.className='hello';
+
+//Add id
+newDiv.id='hello1';
+
+//Add attr
+newDiv.setAttribute("title" ,"Hello Div");
+
+//create text node
+var newDivText = document.createTextNode('Hello');
+
+//Add text to div
+newDiv.appendChild(newDivText);
+
+ var container = document.querySelector('header .container');
+ var h1 = document.querySelector('header h1');
+
+ console.log(newDiv);
+ newDiv.style.fontsize='30px';
+
+container.insertBefore(newDiv,h1);
+
+
+var newDiv1=document.createElement('div');
+newDiv1.classList.add('hellooooo1');
+newDiv1.id="helooooo2";
+newDiv1.setAttribute("title","anu")
+var textdiv=document.createTextNode("Hello")
+newDiv1.appendChild(textdiv)
+var container=document.querySelector('ul')
+var cls=document.querySelector("li")
+container.insertBefore(newDiv1,cls)
 
