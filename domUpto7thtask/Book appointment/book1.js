@@ -19,13 +19,27 @@ function addItem(e) {
 var newName = document.getElementById('name').value;
 var newEmail = document.getElementById('email').value;
 
+//create new li element
 
+var data = document.createElement('li');
+
+// Add class
+
+data.className = 'list-group-item'
+
+//add text node with input value
+
+data.appendChild(document.createTextNode(newName));
+data.appendChild(document.createTextNode('  ' + newEmail));
+
+//append child
+form.appendChild(data);
 let myObj={
   name:newName,
   email: newEmail,
 }
 
 let myObj_serialized=JSON.stringify(myObj);
-localStorage.setItem("key",myObj_serialized);
+localStorage.setItem(myObj.email,myObj_serialized);
 let myObj_Deserialized=JSON.parse(localStorage.getItem("myObj"))
 }
