@@ -54,6 +54,24 @@ deleteBtn.className = 'btn-delete';
 //Append Text node to delete 
 deleteBtn.appendChild(document.createTextNode('X'));
 
+  //edit button 
+  var editBtn = document.createElement('input');
+  editBtn.type = 'button';
+  editBtn.value = 'edit';
+
+  editBtn.onclick = () => {
+    document.querySelector('#name').value = myObj.name;
+    document.querySelector('#email').value = myObj.email;
+    localStorage.removeItem(myObj.email);
+    form.removeChild(data);
+  };
+
+  //add classes to delete button 
+  editBtn.className = 'btn-edit';
+
+  //Append Text node to delete 
+  deleteBtn.appendChild(document.createTextNode('X'));
+
 //add text node with input value
 
 data.appendChild(document.createTextNode(newName));
@@ -62,5 +80,6 @@ data.appendChild(document.createTextNode('  ' + newEmail));
 //append child
 form.appendChild(data);
 data.appendChild(deleteBtn)
+data.appendChild(editBtn);
 
 }
