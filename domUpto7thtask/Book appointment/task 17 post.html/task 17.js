@@ -21,28 +21,28 @@ function saveToLocalStorage(event) {
     });
   showUserOnScreen(obj);
 }
-// window.addEventListener("DOMContentLoaded", () => {
-//   axios
-//     .get(
-//       "https://crudcrud.com/api/68ed200a53994427b9d5174bc47575c1/appointmentData"
-//     )
-//     .then((res) => {
-//       console.log(res);
-//       for (var i = 0; i < res.data.length; i++) {
-//         showUserOnScreen(res.data[i]);
-//       }
-//     })
-//     .catch((err) => {
-//       console.log(err);
-//     });
-// });
-// function showUserOnScreen(obj) {
-//   const parentElement = document.getElementById("my-form");
-//   const childElement = document.createElement("li");
-//   childElement.textContent = `${obj.Name}-${obj.Email}  `;
-//   const button = document.createElement("input");
-//   button.type = "button";
-//   button.value = "Delete";
+window.addEventListener("DOMContentLoaded", () => {
+  axios
+    .get(
+      "https://crudcrud.com/api/68ed200a53994427b9d5174bc47575c1/appointmentData"
+    )
+    .then((res) => {
+      console.log(res);
+      for (var i = 0; i < res.data.length; i++) {
+        showUserOnScreen(res.data[i]);
+      }
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+function showUserOnScreen(obj) {
+  const parentElement = document.getElementById("my-form");
+  const childElement = document.createElement("li");
+  childElement.textContent = `${obj.Name}-${obj.Email}  `;
+  const button = document.createElement("input");
+  button.type = "button";
+  button.value = "Delete";
 //   button.onclick = () => {
 //     // localStorage.removeItem(obj.Email);
 //     axios
@@ -78,4 +78,4 @@ function saveToLocalStorage(event) {
   childElement.appendChild(button);
   childElement.appendChild(EditButton);
   parentElement.appendChild(childElement);
-}
+//}
