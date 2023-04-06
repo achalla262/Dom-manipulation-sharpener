@@ -55,27 +55,27 @@ function showUserOnScreen(obj) {
       .catch((err) => console.log(err));
     parentElement.removeChild(childElement);
   };
-//   const EditButton = document.createElement("input");
-//   EditButton.type = "button";
-//   EditButton.value = "Edit";
-//   EditButton.onclick = () => {
-//     // localStorage.removeItem(obj.Email);
-//     axios
-//       .delete(
-//         `https://crudcrud.com/api/68ed200a53994427b9d5174bc47575c1/appointmentData/${obj._id}`
-//       )
+  const EditButton = document.createElement("input");
+  EditButton.type = "button";
+  EditButton.value = "Edit";
+  EditButton.onclick = () => {
+    // localStorage.removeItem(obj.Email);
+    axios
+      .delete(
+        `https://crudcrud.com/api/68ed200a53994427b9d5174bc47575c1/appointmentData/${obj._id}`
+      )
 
-//       .then((res) => {
-//         console.log(res);
-//       })
-//       .catch((err) => {
-//         console.log(err);
-//       });
-//     parentElement.removeChild(childElement);
-//     document.getElementById("id-name").value = obj.Name;
-//     document.getElementById("id-email").value = obj.Email;
-//   };
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+    parentElement.removeChild(childElement);
+    document.getElementById("id-name").value = obj.Name;
+    document.getElementById("id-email").value = obj.Email;
+  };
   childElement.appendChild(button);
   childElement.appendChild(EditButton);
   parentElement.appendChild(childElement);
-//}
+}
