@@ -43,18 +43,18 @@ function showUserOnScreen(obj) {
   const button = document.createElement("input");
   button.type = "button";
   button.value = "Delete";
-//   button.onclick = () => {
-//     // localStorage.removeItem(obj.Email);
-//     axios
-//       .delete(
-//   `https://crudcrud.com/api/68ed200a53994427b9d5174bc47575c1/appointmentData/${obj._id}`
-//       )
-//       .then((res) => {
-//         console.log(res);
-//       })
-//       .catch((err) => console.log(err));
-//     parentElement.removeChild(childElement);
-//   };
+  button.onclick = () => {
+    // localStorage.removeItem(obj.Email);
+    axios
+      .delete(
+  `https://crudcrud.com/api/68ed200a53994427b9d5174bc47575c1/appointmentData/${obj._id}`
+      )
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => console.log(err));
+    parentElement.removeChild(childElement);
+  };
 //   const EditButton = document.createElement("input");
 //   EditButton.type = "button";
 //   EditButton.value = "Edit";
